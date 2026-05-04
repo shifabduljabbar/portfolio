@@ -1,0 +1,464 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial;
+ }
+
+ body {
+     background: #0a0f1a;
+     color: white;
+ }
+
+ /* SMOOTH SCROLL FIX */
+ html {
+     scroll-behavior: smooth;
+     scroll-padding-top: 100px;
+ }
+
+ /* NAV */
+ nav {
+     display: flex;
+     justify-content: space-between;
+     padding: 20px 80px;
+ }
+
+ nav a {
+     margin-left: 20px;
+     text-decoration: none;
+     color: white;
+     border: 1px solid #3dd5c0;
+     padding: 5px 15px;
+     transition: 0.3s;
+ }
+
+ nav a:hover {
+     background: #3dd5c0;
+     color: black;
+ }
+
+ .contact-btn {
+     margin-top: 20px;
+     padding: 10px 20px;
+     border: 1px solid #3dd5c0;
+     color: #3dd5c0;
+     text-decoration: none;
+     display: inline-block;
+     transition: 0.3s;
+ }
+
+ .contact-btn:hover {
+     background: #3dd5c0;
+     color: black;
+ }
+
+ /* HERO */
+ .container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 80px;
+     min-height: 100vh;
+ }
+
+ .left {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+ }
+
+ .left {
+     position: relative;
+     z-index: 2;
+ }
+
+ .right {
+     flex: 1;
+ }
+
+ .right h1 {
+     font-size: 48px;
+     margin-bottom: 20px;
+ }
+
+ .highlight {
+     color: #3dd5c0;
+ }
+
+ .right p {
+     margin-bottom: 10px;
+ }
+
+ button {
+     margin-top: 20px;
+     padding: 10px 20px;
+     border: 1px solid #3dd5c0;
+     background: transparent;
+     color: #3dd5c0;
+     cursor: pointer;
+ }
+
+ button:hover {
+     background: #3dd5c0;
+     color: black;
+ }
+
+ /* CANVAS */
+ #dotcanvas {
+     width: 350px;
+     height: 350px;
+     display: block;
+     position: relative;
+     z-index: 2;
+ }
+
+ #dotcanvas {
+     width: 350px;
+     height: 350px;
+ }
+
+ /* ABOUT */
+ .about {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 60px;
+     padding: 80px;
+ }
+
+ /* LEFT IMAGE */
+ .about-left {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+ }
+
+ .about-left img {
+     width: 280px;
+     border-radius: 10px;
+ }
+
+ /* RIGHT TEXT */
+ .about-right {
+     flex: 1;
+ }
+
+ .about-right h2 {
+     margin-bottom: 20px;
+ }
+
+ .about-right p {
+     margin-bottom: 20px;
+     line-height: 1.6;
+ }
+
+ /* GREEN POINTS */
+ .about-right ul {
+     list-style: none;
+ }
+
+ .about-right li {
+     color: #3dd5c0;
+     margin-bottom: 10px;
+     transition: transform 0.25s ease, color 0.25s ease;
+     cursor: pointer;
+ }
+
+ .about-right li:hover {
+     transform: translateY(-3px);
+ }
+
+ /* ================= HERO SLIDER ================= */
+
+ .hero-slider {
+     position: relative;
+     /* THIS FIXES YOUR ISSUE */
+     margin-top: 60px;
+ }
+
+ /* CENTERED CONTAINER */
+ .hero-inner {
+     max-width: 1100px;
+     margin: auto;
+     padding: 0 80px;
+ }
+
+ .slider-box {
+     max-width: 900px;
+     margin: auto;
+     border-radius: 20px;
+     overflow: hidden;
+     /* CLIP HERE ONLY */
+ }
+
+ .slides {
+     display: flex;
+     height: 420px;
+     transition: transform 0.5s ease;
+ }
+
+ .slide {
+     min-width: 100%;
+     height: 100%;
+     position: relative;
+ }
+
+
+
+ /* SECTION TITLE */
+ .section-title {
+     font-size: 28px;
+     font-weight: 600;
+     color: white;
+     margin-bottom: 30px;
+     position: relative;
+ }
+
+ .section-title::after {
+     content: "";
+     width: 60px;
+     height: 3px;
+     background: #3dd5c0;
+     position: absolute;
+     left: 0;
+     bottom: -10px;
+ }
+
+
+ /* HOVER EFFECT (forward feel) */
+ .slide:hover img {
+     transform: scale(1.05) translateY(-5px);
+ }
+
+ .slide::after {
+     display: none;
+ }
+
+ .slide img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* TEXT OVERLAY */
+ .overlay {
+     position: absolute;
+     bottom: 40px;
+     left: 50%;
+     transform: translateX(-50%);
+     text-align: center;
+     z-index: 2;
+     color: white;
+ }
+
+ .overlay h2 {
+     font-size: 24px;
+     margin-bottom: 8px;
+ }
+
+ .overlay p {
+     font-size: 13px;
+     opacity: 0.8;
+ }
+
+ /* ARROWS (clean, no boxes) */
+ .prev,
+ .next {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background: none;
+     border: none;
+     color: #3dd5c0;
+     font-size: 28px;
+     cursor: pointer;
+     z-index: 5;
+ }
+
+ .prev {
+     left: 20px;
+ }
+
+ .next {
+     right: 20px;
+ }
+
+ .prev:hover,
+ .next:hover {
+     transform: translateY(-50%) scale(1.2);
+ }
+
+ /* DOTS */
+ .dots {
+     position: absolute;
+     bottom: 15px;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .dot {
+     height: 5px;
+     width: 18px;
+     background: gray;
+     display: inline-block;
+     margin: 4px;
+     cursor: pointer;
+ }
+
+ .dot.active {
+     background: #3dd5c0;
+ }
+
+ /* PROJECTS */
+ .projects {
+     padding: 80px;
+ }
+
+ .projects h2 {
+     margin-bottom: 20px;
+     /* spacing fix */
+ }
+
+ .project-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+ }
+
+ .project {
+     padding: 30px;
+     border: 1px solid #3dd5c0;
+     transition: 0.3s;
+ }
+
+ .project:hover {
+     background: #3dd5c0;
+     color: black;
+     transform: translateY(-5px);
+ }
+
+ /* PROJECT DETAIL PAGE */
+ .project-page {
+     padding: 80px;
+     max-width: 900px;
+     margin: auto;
+     text-align: center;
+ }
+
+ .project-page h1 {
+     font-size: 40px;
+     margin-bottom: 20px;
+ }
+
+ .project-page p {
+     margin-bottom: 20px;
+     line-height: 1.6;
+     color: #ccc;
+ }
+
+ .project-page img {
+     width: 100%;
+     max-width: 600px;
+     margin: 30px 0;
+     border-radius: 8px;
+ }
+
+ /* DOWNLOAD BUTTON */
+ .download-btn {
+     display: inline-block;
+     padding: 12px 25px;
+     border: 1px solid #3dd5c0;
+     color: #3dd5c0;
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ .download-btn:hover {
+     background: #3dd5c0;
+     color: black;
+ }
+
+ /* typing cursor */
+ #typing-text::after {
+     content: "|";
+     margin-left: 5px;
+     animation: blink 1s infinite;
+ }
+
+ .highlight {
+     color: #3dd5c0;
+ }
+
+ #typing-text {
+     color: white !important;
+ }
+
+ .cursor {
+     color: #3dd5c0;
+     animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+
+     0%,
+     50%,
+     100% {
+         opacity: 1;
+     }
+
+     25%,
+     75% {
+         opacity: 0;
+     }
+ }
+
+ .project-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     /* 2 per row */
+     gap: 20px;
+     /* space between boxes */
+ }
+
+ .project {
+     padding: 30px;
+     border: 1px solid #3dd5c0;
+     transition: 0.3s;
+     text-align: center;
+     font-size: 18px;
+ }
+
+ .project {
+     text-decoration: none;
+     color: #3dd5c0;
+     display: flex;
+     /* FIX alignment */
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     cursor: pointer;
+ }
+
+ .project:hover {
+     background: #3dd5c0;
+     color: black;
+     transform: translateY(-5px);
+ }
+
+ .footer {
+     text-align: center;
+     padding: 30px 0;
+     color: #aaa;
+     /* light grey */
+     font-size: 13px;
+     /* slightly small */
+     font-weight: 300;
+     /* thin look */
+     opacity: 0.7;
+     /* softer */
+     margin-top: 60px;
+ }
+
+ .footer p {
+     margin: 4px 0;
+ }

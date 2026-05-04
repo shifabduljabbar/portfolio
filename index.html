@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h2>Abdul Jabbar</h2>
+        <div>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="container">
+        <div class="left">
+            <canvas id="dotcanvas"></canvas>
+        </div>
+
+        <div class="right">
+            <h1>
+                <span id="text-before"></span>
+                <span class="highlight" id="text-name"></span>
+                <span id="text-after"></span><span class="cursor">|</span>
+            </h1>
+            <p>a multi-disciplinary builder skilled in technology, design, and real-world problem solving.</p>
+            <p>from developing apps to designing homes and building furniture, his work reflects precision,
+                practicality, and deep hands-on experience.</p>
+            <p> Outside of work, he enjoys playing chess.</p>
+
+            <a href="mailto:yourmail@gmail.com?subject=Hello&body=Hi Abdul Jabbar," class="contact-btn">
+                ✉ Say hi
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <!-- TEXT LEFT -->
+        <div class="about-right">
+            <h2>/ about abdul jabbar</h2>
+
+            <p>
+                Abdul Jabbar is a multi-talented individual with deep knowledge across technology,construction,and
+                real-world problem solving.
+            </p>
+            <p> From building functional apps to designing homes and crafting furniture from scratch, his work reflects
+                precision, practicality, and mastery.
+                <p />
+            <p>Here are some of the systems and projects he has build and worked on:</p>
+
+
+            <ul>
+                <li>>Software & App Development</li>
+                <li>>Architecture & Interior Design</li>
+                <li>>Furniture Manufacturing</li>
+                <li>>Finance & Communication</li>
+            </ul>
+        </div>
+
+        <!-- IMAGE RIGHT -->
+        <div class="about-left">
+            <img src="photo.jpeg" alt="profile">
+        </div>
+
+    </section>
+
+    <section class="hero-slider">
+
+        <div class="hero-inner">
+            <h2 class="section-title">/ softwares & featured works</h2>
+
+            <div class="slider-box">
+
+                <div class="slides">
+
+                    <div class="slide">
+                        <img src="project1.jpeg">
+                        <div class="overlay">
+                            <h2>Bus Data System</h2>
+                            <p>Smart tracking system</p>
+                            <p>PYTHON(FLASK), HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="project2.jpeg">
+                        <div class="overlay">
+                            <h2>Tally Gateway</h2>
+                            <p>Financial system</p>
+                            <p>PHP/Node.js , HTML, CSS</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="project3.jpeg">
+                        <div class="overlay">
+                            <h2>Wardrobe</h2>
+                            <p>Interior design</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <h2>/ projects</h2>
+
+        <div class="project-grid">
+            <a href="bus-data.html" class="project">Bus Data App</a>
+            <a href="tally-gateway.html" class="project">Tally Gateway</a>
+            <a href="custom-wardrobe.html" class="project">Custom Wardrobe</a>
+            <a href="autocad-plan.html" class="project">AutoCAD Plan</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>Built & Designed by Shifaa Abdul Jabbar.</p>
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
